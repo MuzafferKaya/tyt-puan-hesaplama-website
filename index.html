@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TYT Puan Hesaplama</title>
+    <script src="bootstrap-5.3.0-alpha1-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.6.4.min.js"></script>
+    <script src="js/main.js"></script>
+    <link rel="stylesheet" href="bootstrap-5.3.0-alpha1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <div class="container text-center">
+        <h1 class="my-3">TYT Puan Hesaplama</h1>
+        <table class="mx-auto my-3" cellpadding="10" cellspacing="0" border="1">
+            <thead>
+                <tr>
+                    <th>Ders</th>
+                    <th>Soru</th>
+                    <th>Doğru</th>
+                    <th>Yanlış</th>
+                    <th>Net</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="white">
+                    <td>Türkçe</td>
+                    <td>40</td>
+                    <td><input type="text" class="form-control" id="txtTurkceD" onchange="hesapla('turkce')"></td>
+                    <td><input type="text" class="form-control" id="txtTurkceY" onchange="hesapla('turkce')"></td>
+                    <td id="turkceNet">0</td>
+                </tr>
+                <tr class="smokewhite">
+                    <td>Temel Matematik</td>
+                    <td>40</td>
+                    <td><input type="text" class="form-control" id="txtMatematikD" onchange="hesapla('matematik')"></td>
+                    <td><input type="text" class="form-control" id="txtMatematikY" onchange="hesapla('matematik')"></td>
+                    <td id="matematikNet">0</td>
+                </tr>
+                <tr class="white">
+                    <td>Sosyal Bilimler</td>
+                    <td>20</td>
+                    <td><input type="text" class="form-control" id="txtSosyalD" onchange="hesapla('sosyal')"></td>
+                    <td><input type="text" class="form-control" id="txtSosyalY" onchange="hesapla('sosyal')"></td>
+                    <td id="sosyalNet">0</td>
+                </tr>
+                <tr class="smokewhite">
+                    <td>Fen Bilimleri</td>
+                    <td>20</td>
+                    <td><input type="text" class="form-control" id="txtFenD" onchange="hesapla('fen')"></td>
+                    <td><input type="text" class="form-control" id="txtFenY" onchange="hesapla('fen')"></td>
+                    <td id="fenNet">0</label></td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="mx-auto my-3" cellpadding="10" cellspacing="0" border="1">
+            <tr class="white">
+                <td colspan="2">Diploma Notu</td>
+                <td><input type="text" class="form-control" id="txtdiploma" onchange="hesapla('diploma')"></td>
+                <td>OBP:</td>
+                <td id="diplomaOBP">-</td>
+            </tr>
+        </table>
+        <input type="button" value="Puanı Hesapla" class="btn btn-success" onclick="puanHesapla()">
+        <input type="button" value="Temizle" class="btn btn-danger" onclick="location.reload()">
+        <table class="mx-auto my-3" cellpadding="10" cellspacing="0" border="1">
+            <thead>
+                <tr>
+                    <th>Ham Puan</th>
+                    <th>Yerleştirme Puanı</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th id="hamPuan">-</th>
+                    <th id="yerleşmePuan">-</th>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>

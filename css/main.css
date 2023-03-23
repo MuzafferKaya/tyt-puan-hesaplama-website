@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+thead {
+    background-color: #343A40;
+    color: white;
+}
+
+.white {
+    background-color: #FFFFFF;
+}
+
+.smokewhite {
+    background-color: #EFEDF1;
+}
+
+.form-control {
+    text-align: center;
+}
